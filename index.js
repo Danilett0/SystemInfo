@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const port = process.env.port || 3000;
-const os = require("node:os");
+const os = require("os");
 
 app.use(cors());
 
@@ -26,7 +26,7 @@ let systemInfo = {
 };
 
 app.get("/", (req, res) => {
-    res.send("En esta app podras consultar la información mas relevante de tu Sistema Operativo");
+    res.send("En esta app podras consultar la información mas relevante de tu Sistema Operativo en la ruta /systemInfo");
   });
 
 app.get("/systemInfo", (req, res) => {
